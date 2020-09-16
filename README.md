@@ -1,0 +1,1 @@
+this repository is doing to first c exercicies
