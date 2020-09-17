@@ -6,9 +6,11 @@
 */
 int main(void)
 {
-int alp
-for (alp= 'a'; alp<= 'z'; ch++)
-putchar("alp")
-putchar("\n")
+int alp, ALP;
+for (alp = 'a'; alp <= 'z'; alp++)
+putchar(alp);
+for (ALP = 'A'; ALP <= 'Z'; ALP++);
+putchar(ALP);
+putchar('\n');
 return (0);
 }
