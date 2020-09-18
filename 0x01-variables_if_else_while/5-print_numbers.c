@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-int alp
-for (alp= 'a'; alp<= 'z'; ch++)
-putchar("alp")
-putchar("\n")
+int nu;
+for (nu = 0; nu < 10; nu++)
+printf("%d", nu);
+printf("\n");
 return (0);
 }
