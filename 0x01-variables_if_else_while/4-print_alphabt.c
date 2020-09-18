@@ -6,14 +6,14 @@
 */
 int main(void)
 {
-int al, AL;
+int al;
 for (al = 'a'; al <= 'z'; al++)
 {
-putchar(al);
-}
-for (AL = 'A'; AL <= 'Z'; AL++)
+if (al == 'q' || al == 'e')
 {
-putchar(AL);
+al++;
+}	
+putchar(al);
 }
 putchar('\n');
 return (0);
