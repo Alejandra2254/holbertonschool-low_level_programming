@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 /**
 * main - Entry point
 *
@@ -8,7 +7,7 @@
 int main(void)
 {
 int nm;
-for (nm = 0; nm < 100 ; m++)
+for (nm = 0; nm < 100 ; nm++)
 {
 putchar((nm / 10) + '0');
 putchar((nm % 10) + '0');
