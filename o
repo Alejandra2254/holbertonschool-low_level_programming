@@ -1,0 +1,11 @@
+#include<stdio.h>
+/*
+* file: Welcome
+*
+* this simple C program print out the text "Hello, Betty"
+*/
+int main(void)
+{
+printf("Hello, Betty\n");
+return(0)
+}
