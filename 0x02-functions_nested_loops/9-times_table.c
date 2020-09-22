@@ -16,7 +16,12 @@ void times_table(void)
 			c = a % 10;
 			if (x != 9)
 			{
-				if (a < 10)
+				if (x == 0)
+				{
+					_putchar(a + '0');
+					_putchar(',');
+				}
+				else if (a < 10 && x != 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
