@@ -1,13 +1,14 @@
 #include "holberton.h"
 
 /**
- * main aboslute value
- *
+ * _abs - absolute value of a number
+ * @r: checks the numbers
+ * Return: returns absolute value of r
  */
 
 int _abs(int r)
 {
-	if ( r < 0)
+	if (r < 0)
 	{
 		r = r * -1;
 		return (r);
