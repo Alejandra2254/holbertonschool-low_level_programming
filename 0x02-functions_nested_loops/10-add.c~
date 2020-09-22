@@ -1,0 +1,10 @@
+#include "holberton.h"
+/**
+ * add - add two integers numbers
+ *
+ * Return: returns result
+ */
+int add(int a, int b)
+{
+	return (a + b);
+}
