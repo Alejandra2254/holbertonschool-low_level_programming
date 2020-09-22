@@ -14,22 +14,27 @@ void times_table(void)
 			a = x * y;
 			b = a / 10;
 			c = a % 10;
-			if (a < 10)
+			if (x != 9)
 			{
-				_putchar(a + '0');
-				_putchar(' ');
+				if (a < 10)
+				{
+					_putchar(a + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(b + '0');
+					_putchar(c + '0');
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 			else
 			{
-				_putchar(b + '0');
-				_putchar(c + '0');
-			}
-			if (x != 9)
-			{
-				_putchar(',');
-				_putchar(' ');
+			_putchar('\n');
 			}
 		}
-			_putchar('\n'); 
 	}
 }
