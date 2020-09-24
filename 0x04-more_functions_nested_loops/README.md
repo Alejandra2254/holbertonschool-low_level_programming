@@ -1,0 +1,1 @@
+The "nested loops join" is the fundamental joining algorithm. It works as two nested statements: the outer or guide statement to bring the result from one table and a second (inner) statement for each record from the guide statement to bring the corresponding data to the other table.
