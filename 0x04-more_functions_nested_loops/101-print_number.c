@@ -1,61 +1,46 @@
 #include "holberton.h"
-#include <stdio.h>
-/**
- * mypow - Quick pow implementation.
- * Description: Multiples number by itself a number of times
- * designated by the exponent.
- *
- * @base: base number
- * @exponent: exponent, number of times to multiply base by itself
- * Return: returns zero
- */
-long mypow(long base, long exponent)
-{
-	long val = 1;
-
-	while (exponent > 0)
-	{
-		val *= base;
-		exponent--;
-	}
-	return (val);
-
-}
 
 /**
- * print_number - takes in number, outputs  using putchar
- *
- * @n: number to putchar
- * Return: void
+ * print_number -  checks for checks for a digit (0 through 9).
+ * @n: n -  Variable
+ * Return: Always 0.
  */
 void print_number(int n)
 {
-	long digits, stop, i, num, temp;
+	unsigned int z;
+	int m, b;
 
-	i = 1;
-	digits = 0;
-	stop = 0;
-	temp = n;
-	if (temp < 0)
+	b = 10;
+
+	if (n < 10 && n >= 0)
 	{
+		_putchar (n + '0');
+	}
+	else if (n > -10 && n < 0)
+	{
+		n = n - 2 * n;
 		_putchar('-');
-		temp = (temp - (temp * 2));
-	}
-	while (stop == 0)
-	{
-		if ((temp / mypow(10, i)) < 1)
-			break;
-		i++;
-		digits++;
+		_putchar (n + '0');
 	}
 
-	num = temp / mypow(10, digits);
-	_putchar(num + '0');
-
-	while (digits > 0)
+	else
 	{
-		num = temp % mypow(10, digits--);
-		num = num / mypow(10, digits);
-		_putchar(num + '0');
+		if (n < 0)
+		{
+			n = n * -1;
+			_putchar ('-');
+		}
+		z = n;
+		while (z / b > 9)
+		{
+			b = b * 10;
+		}
+		while (b > 0)
+		{
+			m = z / b;
+			z = z % b;
+			_putchar (m + '0');
+			b = b / 10;
+		}
 	}
 }
