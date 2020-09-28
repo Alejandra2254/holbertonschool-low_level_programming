@@ -16,7 +16,6 @@ int main(void)
 		num3 = num1 + num2;
 		num1 = num2;
 		num2 = num3;
-		
 		if (n != 50)
 			printf("%ld, ", num3);
 		else
