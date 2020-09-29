@@ -1,0 +1,1 @@
+### this project includes pointers, arrays and strings in c language

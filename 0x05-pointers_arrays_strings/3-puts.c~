@@ -1,0 +1,10 @@
+#include "holberton.h"
+/**
+ * _puts - prints a string
+ * @str - string
+ * Return: string
+ */
+void _puts(char *str)
+{
+	return (write (*str));
+}
