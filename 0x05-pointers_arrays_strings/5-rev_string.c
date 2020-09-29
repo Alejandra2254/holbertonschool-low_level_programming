@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_rev - prints a string
+ * rev_string - prints a string
  * @s: string
  * Return: string
  */
