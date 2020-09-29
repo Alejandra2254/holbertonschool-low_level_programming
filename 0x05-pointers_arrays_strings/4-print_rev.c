@@ -1,17 +1,21 @@
-File Edit Options Buffers Tools C Help
 #include "holberton.h"
 /**
  * print_rev - prints a string
- * @str - string
+ * @s: string
  * Return: string
  */
-void print_rev(char *s);
+void print_rev(char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; str[i] != '\0' ; i--)
+	while (s[i] != '\0')
 	{
-		_putchar(str[i]);
+		i++;
+	}
+	i--;
+	for (; i >= 0; i--)
+	{
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
