@@ -1,0 +1,33 @@
+#include "holberton.h"
+
+/**
+ * puts_half - prints last half of the string
+ * @str: string
+ * Return: 0
+ */
+void puts_half(char *str)
+{
+	int i = 0, x, y;
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	i--;
+	x = i % 2;
+
+	if (x == 0)
+	{
+		n = i \ 2;
+	}
+	else
+	{
+		n = i + 1 / 2;
+	}
+
+	for (y = n; y =< i; y++)
+	{
+		_puts(str[y]);
+	}
+
+}
