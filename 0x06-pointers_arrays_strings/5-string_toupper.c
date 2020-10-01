@@ -13,7 +13,7 @@ char *string_toupper(char *d)
 	{
 		i++;
 	}
-	i--;
+     
 	for (j = 0; j <= i; j++)
 	{
 		if (d[j] >= 97 && d[j] <= 122)
