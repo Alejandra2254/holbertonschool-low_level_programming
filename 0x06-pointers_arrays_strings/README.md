@@ -1,0 +1,1 @@
+### we are going to use more pointers, arrays and strings
