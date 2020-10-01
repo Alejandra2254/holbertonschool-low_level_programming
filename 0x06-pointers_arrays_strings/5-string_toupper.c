@@ -3,7 +3,7 @@
 /**
  * string_toupper - changes all lowecase letters
  * @d: string
- * return: uppercase string
+ * Return: uppercase string
  */
 char *string_toupper(char *d)
 {
@@ -13,7 +13,6 @@ char *string_toupper(char *d)
 	{
 		i++;
 	}
-     
 	for (j = 0; j <= i; j++)
 	{
 		if (d[j] >= 97 && d[j] <= 122)
