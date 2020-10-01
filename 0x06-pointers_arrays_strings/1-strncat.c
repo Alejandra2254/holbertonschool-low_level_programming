@@ -1,15 +1,16 @@
 #include "holberton.h"
 
 /**
- * _strncat -
- * @dest
- * @src
- * Return:
+ * _strncat - concatenates two strings
+ * @dest: first string
+ * @src: secind string
+ * @n: number characters to concatenate
+ * Return: dest
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, d = 0;
+	int i = 0, d = 0, u = 0;
 
 	while (dest[i] != '\0')
 	{
@@ -18,13 +19,20 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (src[d] != '\0')
 	{
-		dest[i] = src[d];
 		d++;
+	}
+	while (u <= d)
+	{
+		if (n > 0)
+		{
+		dest[i] = src[u];
 		i++;
-		if (n == d)
+		u++;
+		n--;
+		}
+		else
 			break;
 	}
 
-	dest[i] = '\0';
 	return (dest);
 }
