@@ -1,34 +1,48 @@
 #include "holberton.h"
 
 /**
- * long_1 - check the code for Holberton School students.
- * @s: number
- *
- * Return: Always 0.
+ * _lon - check the code for Holberton School students.
+ * @s: string
+ * Return: Always
  */
-
-int long_1(char *s)
+int _lon(char *s)
 {
 	if (*s != '\0')
 	{
-		return (1 + long_1(s + 1));
+		return (1 + _lon(s + 1));
 	}
 	return (0);
-
 }
-int compare(char *s, int l)
+/**
+ * _compare - funtion to compare
+ * @s: string position
+ * @a: long
+ * Return: 1 is in palindrome 0 if not
+ */
+int _compare(char *s, int a)
 {
+	if (*s == *(s + (a - 1)))
+	{
+		return (_compare(s + 1, a - 2));
+	}
+	else if (a <= 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 /**
  * is_palindrome - check the code for Holberton School students.
  * @s: character
- *
  * Return: Always 0.
  */
 int is_palindrome(char *s)
 {
-	int l;
+	int a;
 
-	l = long_1(s);
-	return (compare(s, l));
+	a = _lon(s);
+	return (_compare(s, a));
 }
