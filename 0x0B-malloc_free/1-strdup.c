@@ -5,7 +5,7 @@
 /**
  * _strdup - duplicate a string
  * @str: string original
- * return: NULL if str or s is null and a pointer of S if not
+ * Return: NULL if str or s is null and a pointer of S if not
  */
 char *_strdup(char *str)
 {
