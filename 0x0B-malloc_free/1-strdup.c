@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * _strdup - duplicate a string
+ * @str: string original
+ * return: NULL if str or s is null and a pointer of S if not
+ */
 char *_strdup(char *str)
 {
 	char *s;
@@ -10,7 +15,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	while (str[i] !='\0')
+	while (str[i] != '\0')
 		i++;
 	s = malloc(i * sizeof(*s) + 1);
 	if (s == NULL)
