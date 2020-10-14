@@ -9,8 +9,28 @@
 
 char *argstostr(int ac, char **av)
 {
+	int i, j, lg;
+	char *a;
+
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
+
+	for (i = 0; i < ac; i++)
+	{
+		j = 0;
+		while (av[i][j] != '\0')
+		{
+			j++;
+			lg ++;
+		}
+	}
+	a = malloc(sizeof(char) * lg + 1);
+
+	if (a == NULL)
+	{
+		return (NULL);
+	}
+	return (a);
 }
