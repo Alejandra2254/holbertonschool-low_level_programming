@@ -1,16 +1,16 @@
-#Malloc and Free
+# Malloc and Free
 
 ## Automatic allocation
 
 _When you declare variables or when you use strings within double quotes, the program is taking care of all the memory allocation. You do not have to think about it.
 
-##Dynamic allocation
+## Dynamic allocation
 
-###Malloc
+### Malloc
 
 _The malloc function allocates a specific number of bytes in memory and returns a pointer to the allocated memory. This memory will have read and write permissions.
 
-###Free
+### Free
 
 _When you are using malloc, you have to handle the memory yourself. This means that:
 
