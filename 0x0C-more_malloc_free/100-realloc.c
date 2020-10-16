@@ -1,10 +1,11 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- *main - Write a function that reallocates a memory block using malloc and free
+ *_realloc - Write a function that reallocates a memory block using malloc
  *@ptr: pointer
  *@old_size: unsigned integer
  *@new_size: unsigned integer
+ *Return: NULL or pointer
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
