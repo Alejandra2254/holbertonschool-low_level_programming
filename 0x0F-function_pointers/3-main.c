@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - recieved arguments and checks if those are correct.
+ * main - recieved arguments and checks if those are correcthola
  * @argc: arguments cant
  * @argv: vector arguments
  * Return: 0 if false, something else otherwise.
