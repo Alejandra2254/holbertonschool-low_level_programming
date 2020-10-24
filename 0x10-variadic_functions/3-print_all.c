@@ -48,6 +48,7 @@ void _string(va_list arg)
  */
 void print_all(const char * const format, ...)
 {
+	va_list arg;
 	form_ form1[] = {
 		{"c", _char},
 		{"i", _integer},
@@ -55,7 +56,6 @@ void print_all(const char * const format, ...)
 		{"s", _string},
 	};
 	int i = 0, j = 0;
-	va_list arg;
 	char *sep = "";
 
 	va_start(arg, format);
