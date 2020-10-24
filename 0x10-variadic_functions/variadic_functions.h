@@ -22,4 +22,5 @@ void _char(va_list arg);
 void _integer(va_list arg);
 void _float(va_list arg);
 void _string(va_list arg);
+
 #endif
