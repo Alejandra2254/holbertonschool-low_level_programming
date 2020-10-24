@@ -33,7 +33,10 @@ void _string(va_list arg)
 
 	s = va_arg(arg, char *);
 	if (s == NULL)
+	{
 		s = "(nil)";
+		return;
+	}
 	printf("%s", s);
 }
 
