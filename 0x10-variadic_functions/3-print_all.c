@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 	{
 		while (j < 4)
 		{
-			if (*form1[j].type == format[i])
+			if (form1[j].type == format[i])
 			{
 				printf("%s", sep);
 				form1[j].f(arg);
