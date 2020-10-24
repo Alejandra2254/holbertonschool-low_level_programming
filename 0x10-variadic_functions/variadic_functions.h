@@ -14,7 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...);
  */
 typedef struct form
 {
-	char *type;
+	char type;
 	void (*f)();
 } form_;
 void print_all(const char * const format, ...);
