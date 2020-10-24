@@ -10,8 +10,7 @@ void print_all(const char * const format, ...)
 		{"i", _integer},
 		{"f", _float},
 		{"s", _string},
-		{NULL, NULL}
-	};
+      	};
 	int i = 0, j = 0;
 	va_list arg;
 	char *sep = "";
