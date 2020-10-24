@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include "variadic_functions.h"
-#include <stdarg.h>
+
 /**
  * _char - print char
  * @arg: argumentos
@@ -35,10 +34,7 @@ void _string(va_list arg)
 
 	s = va_arg(arg, char *);
 	if (s == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
+		s = "(nil)";
 	printf("%s", s);
 }
 
@@ -59,7 +55,7 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 
 	va_start(arg, format);
-	while (format[i] != '\0' && format != NULL)
+	while (format && format[i])
 	{
 		while (j < 4)
 		{
@@ -71,8 +67,8 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
-		i++;
 		j = 0;
+		i++;
 	}
 	printf("\n");
 	va_end(arg);
