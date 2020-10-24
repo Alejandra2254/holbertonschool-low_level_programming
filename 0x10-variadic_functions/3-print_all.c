@@ -10,13 +10,13 @@ void print_all(const char * const format, ...)
 		{"i", _integer},
 		{"f", _float},
 		{"s", _string},
-      	};
+	};
 	int i = 0, j = 0;
 	va_list arg;
 	char *sep = "";
 
 	va_start(arg, format);
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
 		while (j < 4)
 		{
