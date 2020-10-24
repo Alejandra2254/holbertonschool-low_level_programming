@@ -1,3 +1,3 @@
 # Variadic Funtions
-
+j
 _Sometimes you may come across a situation, where you want to have a function, which can take a variable number of arguments, that is, parameters, instead of a predefined number of parameters. The C programming language provides a solution for this situation and you are allowed to define a function that can accept a variable number of parameters according to your needs. The following example shows the definition of such a function._
