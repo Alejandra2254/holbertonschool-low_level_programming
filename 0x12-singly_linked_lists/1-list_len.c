@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- *
- *
- *
+ * list_len - list of list
+ * @h: pointer lo list
+ * Return: count of elements
  */
 size_t list_len(const list_t *h)
 {
