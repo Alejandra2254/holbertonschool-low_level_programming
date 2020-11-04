@@ -5,8 +5,7 @@
 #include <string.h>
 /**
  * struct nodo - singly linked list
- * @str: string of our list
- * @len: length
+ * @n: integer of our list
  * @next: apuntador siguiente nodo
  */
 
