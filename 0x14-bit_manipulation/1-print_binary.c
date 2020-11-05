@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
-	i = 32;
+	i = sizeof(n) * 8;
 	for (; i; i--)
 	{
 		ntoprint = (n >> (i -1)) & 1;
