@@ -5,24 +5,23 @@
  */
 void print_binary(unsigned long int n)
 {
-	int flag = 0;
-	int i, a = 1, b;
-      	unsigned long int p;
+	char flag = 'f';
+      	unsigned long int i, ntoprint;
 
 	if (!n)
 	{
 		_putchar('0');
 		return;
 	}
-	for (i = 0; i < 32; i++)
+	i = 32;
+	for (; i; i--)
 	{
-		p = ((a << (31 - i)) & n);
-		if (p >> (31 - i))
-			flag = 1;
-		if (flag)
+		ntoprint = (n >> (i -1)) & 1;
+
+		if (!flag || ntoprint)
 		{
-			b = p >> (31 - i);
-			_putchar(b + 48);
+			_putchar(ntoprint + '0');
+			flag = '\0';
 		}
 	}
 }
