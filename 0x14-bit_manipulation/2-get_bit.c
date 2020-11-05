@@ -3,6 +3,7 @@
  * get_bit - Write a function that returns the value of a bit at a given index.
  * @n: integer
  * @index: where index is the index
+ * Return: value
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
