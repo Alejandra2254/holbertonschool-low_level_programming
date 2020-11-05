@@ -6,7 +6,7 @@
 void print_binary(unsigned long int n)
 {
 	char flag = 'f';
-      	unsigned long int i, ntoprint;
+	unsigned long int i, ntoprint;
 
 	if (!n)
 	{
@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 	i = sizeof(n) * 8;
 	for (; i; i--)
 	{
-		ntoprint = (n >> (i -1)) & 1;
+		ntoprint = (n >> (i - 1)) & 1;
 
 		if (!flag || ntoprint)
 		{
