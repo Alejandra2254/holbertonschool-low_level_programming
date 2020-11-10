@@ -1,30 +1,5 @@
 #include "holberton.h"
 /**
- * errcheck - Handles errors.
- * @e: Switch case for error code.
- * @filename: File causing error.
- */
-void errcheck(int e, char *filename)
-{
-	switch (e)
-	{
-	case 97:
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-
-	case 98:
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
-		exit(98);
-
-	case 99:
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-		exit(99);
-
-	default:
-		break;
-	}
-}
-/**
  * main - Copies the content of a file to another file h.
  * @argc: Argument count.
  * @argv: Arguments.
@@ -70,4 +45,29 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	return (0);
+}
+/**
+ * errcheck - Handles errors.
+ * @e: Switch case for error code.
+ * @filename: File causing error.
+ */
+void errcheck(int e, char *filename)
+{
+	switch (e)
+	{
+	case 97:
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+
+	case 98:
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+		exit(98);
+
+	case 99:
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+		exit(99);
+
+	default:
+		break;
+	}
 }
