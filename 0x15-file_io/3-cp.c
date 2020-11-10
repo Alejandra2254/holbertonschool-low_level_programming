@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
 		errcheck(97, NULL);
 
 	from1 = open(argv[1], O_RDONLY);
+	if (from1 == -1)
+		errcheck(98, argv[1]);
 	rd = read(from1, buf, 1024);
 	if (rd == -1)
 		errcheck(98, argv[1]);
