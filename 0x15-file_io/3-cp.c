@@ -21,11 +21,6 @@ void errcheck(int e, char *filename)
 	case 99:
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
-
-	case 100:
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", filename);
-		exit(100);
-
 	default:
 		break;
 	}
@@ -61,8 +56,14 @@ int main(int argc, char *argv[])
 		rd = read(fopen, buf, 1024);
 	}
 	if (close(fopen) == -1)
-		errcheck(100, "fopen");
+	{
+		dprintf(2, "Error: Can't close fd %d", fopen);
+		exit(100);
+	}
 	if (close(topen) == -1)
-		errcheck(100, "topen");
-	return (0);
+	{
+		dprintf(2, "Error: Can't close fd %d", topen);
+		exit(100);
+	}
+	return (topen);
 }
