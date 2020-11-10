@@ -55,6 +55,8 @@ int main(int argc, char *argv[])
 		if (wrt == -1)
 			errcheck(99, argv[2]);
 		rd = read(from1, buf, 1024);
+		if (rd == -1)
+			errcheck(98, argv[1]);
 	}
 	fd_close = close(from1);
 	if (fd_close == -1)
