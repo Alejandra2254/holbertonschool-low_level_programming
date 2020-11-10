@@ -22,7 +22,6 @@ void errcheck(int e, char *filename)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 		break;
-		
 	default:
 		break;
 	}
