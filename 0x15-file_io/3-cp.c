@@ -33,7 +33,7 @@ void errcheck(int e, char *filename)
  */
 int main(int argc, char *argv[])
 {
-	int from1, to2, rd, wrt = 0, fd_close;
+	int from1, to2, rd, wrt, fd_close;
 	char buf[1024];
 
 	if (argc != 3)
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
 	from1 = open(argv[1], O_RDONLY);
 	rd = read(from1, buf, 1024);
-	if (from1 == -1 || rd == -1)
+	if (rd == -1)
 		errcheck(98, argv[1]);
 
 	to2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
