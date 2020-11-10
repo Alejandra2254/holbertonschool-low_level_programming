@@ -21,7 +21,7 @@ void errcheck(int e, char *filename)
 	case 99:
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
-		break;
+
 	default:
 		break;
 	}
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	fd_close = close(to2);
-	if (fd_close == -1)
+	if (close(to2) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to2);
 		exit(100);
