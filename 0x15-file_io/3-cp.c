@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+ * errcheck - Handles errors.
+ * @e: Switch case for error code.
+ * @filename: File causing error.
+ */
 void errcheck(int e, char *filename)
 {
 	switch (e)
@@ -25,9 +30,15 @@ void errcheck(int e, char *filename)
 		break;
 	}
 }
+/**
+ * main - Copies the content of a file to another file.
+ * @argc: Argument count.
+ * @argv: Arguments.
+ * Return: 0 if no errors, else -1.
+ */
 int main(int argc, char *argv[])
 {
-	int fopen, topen, rd, wrt;
+	int fopen, topen, rd, wrt = 0;
 	char buf[1024];
 
 	if (argc != 3)
