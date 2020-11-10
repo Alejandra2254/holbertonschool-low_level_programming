@@ -33,38 +33,38 @@ void errcheck(int e, char *filename)
  */
 int main(int argc, char *argv[])
 {
-	int fopen, topen, rd, wrt = 0, fd_close;
-	char *buf;
+	int from1, to2, rd, wrt = 0, fd_close;
+	char buf[1024];
 
 	if (argc != 3)
 		errcheck(97, NULL);
-	buf = malloc(1024);
-	fopen = open(argv[1], O_RDONLY);
-	rd = read(fopen, buf, 1024);
-	if (fopen == -1 || rd == -1)
+
+	from1 = open(argv[1], O_RDONLY);
+	rd = read(from1, buf, 1024);
+	if (from1 == -1 || rd == -1)
 		errcheck(98, NULL);
 
-	topen = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
-	if (topen == -1)
+	to2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	if (to2 == -1)
 		errcheck(99, argv[2]);
 
-	while (rd > 0)
+	while (rd != 0)
 	{
-		wrt = write(topen, buf, rd);
+		wrt = write(to2, buf, rd);
 		if (wrt == -1)
 			errcheck(99, argv[2]);
-		rd = read(fopen, buf, 1024);
+		rd = read(from1, buf, 1024);
 	}
-	fd_close = close(fopen);
+	fd_close = close(from1);
 	if (fd_close == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", fopen);
+		dprintf(2, "Error: Can't close fd %d", from1);
 		exit(100);
 	}
-	fd_close = close(topen);
-	if (fd_close == -1)
+	fd_close = close(to2);
+	if (from1 == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", topen);
+		dprintf(2, "Error: Can't close fd %d", to2);
 		exit(100);
 	}
 	return (0);
