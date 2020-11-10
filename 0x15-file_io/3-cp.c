@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	fd_close = close(to2);
-	if (from1 == -1)
+	if (fd_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to2);
 		exit(100);
