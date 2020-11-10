@@ -34,11 +34,11 @@ void errcheck(int e, char *filename)
 int main(int argc, char *argv[])
 {
 	int fopen, topen, rd, wrt = 0, fd_close;
-	char buf[1024];
+	char *buf;
 
 	if (argc != 3)
 		errcheck(97, NULL);
-
+	buf = malloc(1024);
 	fopen = open(argv[1], O_RDONLY);
 	rd = read(fopen, buf, 1024);
 	if (fopen == -1 || rd == -1)
