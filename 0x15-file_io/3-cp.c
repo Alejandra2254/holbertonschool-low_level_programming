@@ -26,7 +26,7 @@ void errcheck(int e, char *filename)
 	}
 }
 /**
- * main - Copies the content of a file to another file.
+ * main - Copies the content of a file to another file h.
  * @argc: Argument count.
  * @argv: Arguments.
  * Return: 0 if no errors, else -1.
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	from1 = open(argv[1], O_RDONLY);
 	rd = read(from1, buf, 1024);
 	if (from1 == -1 || rd == -1)
-		errcheck(98, NULL);
+		errcheck(98, argv[1]);
 
 	to2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (to2 == -1)
