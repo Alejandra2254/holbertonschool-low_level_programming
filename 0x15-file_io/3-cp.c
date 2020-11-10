@@ -41,13 +41,12 @@ int main(int argc, char *argv[])
 	from1 = open(argv[1], O_RDONLY);
 	if (from1 == -1)
 		errcheck(98, argv[1]);
-	rd = read(from1, buf, 1024);
-	if (rd == -1)
-		errcheck(98, argv[1]);
 	to2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (to2 == -1)
 		errcheck(99, argv[2]);
-
+	rd = read(from1, buf, 1024);
+	if (rd == -1)
+		errcheck(98, argv[1]);
 	while (rd > 0)
 	{
 		wrt = write(to2, buf, rd);
