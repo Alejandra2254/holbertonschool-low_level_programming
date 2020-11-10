@@ -33,7 +33,7 @@ void errcheck(int e, char *filename)
  */
 int main(int argc, char *argv[])
 {
-	int fopen, topen, rd, wrt = 0;
+	int fopen, topen, rd, wrt = 0, fd_close;
 	char buf[1024];
 
 	if (argc != 3)
@@ -55,15 +55,17 @@ int main(int argc, char *argv[])
 			errcheck(99, argv[2]);
 		rd = read(fopen, buf, 1024);
 	}
-	if (close(fopen) == -1)
+	fd_close = close(fopen);
+	if (fd_close == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d", fopen);
 		exit(100);
 	}
-	if (close(topen) == -1)
+	fd_close = close(topen);
+	if (fd_close == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d", topen);
 		exit(100);
 	}
-	return (topen);
+	return (0);
 }
