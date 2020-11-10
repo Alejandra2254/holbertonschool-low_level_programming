@@ -58,13 +58,13 @@ int main(int argc, char *argv[])
 	fd_close = close(from1);
 	if (fd_close == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", from1);
+		dprintf(2, "Error: Can't close fd %d\n", from1);
 		exit(100);
 	}
 	fd_close = close(to2);
 	if (from1 == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", to2);
+		dprintf(2, "Error: Can't close fd %d\n", to2);
 		exit(100);
 	}
 	return (0);
