@@ -1,6 +1,6 @@
 # Titulo del proyecto
 
-_ simple_shell is a project that consists of building a simple Unix shell replica, in order to obtain a deeper appreciation of how it works.
+'simple_shell' is a project that consists of building a simple Unix shell replica, in order to obtain a deeper appreciation of how it works.
 
 our simple shell will have the ability to:
 1. Initialize: when executing our program, it remains in an infinite loop that prints a prompt and is always ready to take any command.
