@@ -1,7 +1,6 @@
 # Titulo del proyecto
 
 ## Description  
-
 `Simple_shell` is a project that consists of building a simple Unix shell replica, in order to obtain a deeper appreciation of how it works. Also, as specific objectives `simple_shell` is programmed in c language, based on everything learned so far and applying linux concepts as well.
 
 Our `simple_shell` will have the ability to:
@@ -30,6 +29,14 @@ The repository contains the following files:
 |[functions2.c](./functions2.c)| `message_exit` function, `built_in` function, `_cenv` function,  `free_stuff` function and `argset` function |
 |[functions3.c](./functions3.c)| `_unsetenv` function, `argunset` function and `handle_sigint` function |
 
+### Usage and Installation 
+Clone the repository, compile with compilation flags, listed below, then run the executable.
+```
+$ git clone https://github.com/------/simple_shell.git
+```
+### Compilation 
+This code was compiled this way:
+` $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh `
 ## Running an Example
 
 
