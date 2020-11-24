@@ -35,7 +35,7 @@ The repository contains the following files:
 $ https://github.com/torres1-23/simple_shell.git
 ```
 2. Compile with compilation flags
-`Simple_shell` will be compiled this way:
+- `Simple_shell` will be compiled this way:
 ` $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh `
 3. Run the executable.
 ## Running an Example
