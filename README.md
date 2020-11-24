@@ -44,8 +44,9 @@ $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ./hsh
 ```
 ## Running an Example
-
-
+4. After running the executable the prompt appears waiting for the command.
+5. The example command is ls -l, as seen in the image
+![alt text](https://ibb.co/XSDsB33) 
 
 ## Authors 
 
