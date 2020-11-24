@@ -11,11 +11,9 @@ Our `simple_shell` will have the ability to:
     - Parse: Separate the command into a program and arguments.
     - Execute: executes the analyzed command.
 3. Terminate - After your commands run, `simple_shell` executes shutdown commands, frees memory, and terminates.
-## Authors 
 
-* **Mauricio Alejandro Torres** - [torres1-23](https://github.com/torres1-23)
-* **Alejandra Higuera Munevar** - [Alejandra2254](https://github.com/Alejandra2254)
-
+## Built with 
+C programming language
 
 ## File Contents
 The repository contains the following files:
@@ -30,4 +28,13 @@ The repository contains the following files:
 |[functions1.c](./functions1.c)| `_getenv` function, `_getposition` function, `_cexit` function,  `_atoi` function and `delspace` function |
 |[functions2.c](./functions2.c)| `message_exit` function, `built_in` function, `_cenv` function,  `free_stuff` function and `argset` function |
 |[functions3.c](./functions3.c)| `_unsetenv` function, `argunset` function and `handle_sigint` function |
+
+## Running an Example
+
+
+
+## Authors 
+
+* **Mauricio Alejandro Torres** - [torres1-23](https://github.com/torres1-23)
+* **Alejandra Higuera Munevar** - [Alejandra2254](https://github.com/Alejandra2254)
 
