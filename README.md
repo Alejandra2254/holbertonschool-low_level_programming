@@ -1,6 +1,4 @@
-<p align="center">
-
-Fuente: https://www.iteramos.com/pregunta/34047/-github-readmemd-imagen-central-<a href="https://ibb.co/NyhFd41"><img src="https://i.ibb.co/FDvhLPs/sssq.png" alt="sssq" border="0"></a> </p>
+<p align="center"><a href="https://ibb.co/NyhFd41"><img src="https://i.ibb.co/FDvhLPs/sssq.png" alt="sssq" border="0"></a> </p>
 ## Description  
 `Simple_shell` is a project that consists of building a simple Unix shell replica, in order to obtain a deeper appreciation of how it works. Also, as specific objectives `simple_shell` is programmed in c language, based on everything learned so far and applying linux concepts as well.
 
