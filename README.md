@@ -1,4 +1,4 @@
-<p align="center"><a href="https://imgbb.com/"><img src="https://i.ibb.co/VgLMKFX/sss.png" alt="sss" border="0"></a> </p>
+# Simple Shell
 ## Description  
 `Simple_shell` is a project that consists of building a simple Unix shell replica, in order to obtain a deeper appreciation of how it works. Also, as specific objectives `simple_shell` is programmed in c language, based on everything learned so far and applying linux concepts as well.
 
@@ -46,7 +46,8 @@ $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 4. After running the executable the prompt appears waiting for the command.
 5. The example command is ls -l, as seen in the image
 
-<a href="https://ibb.co/K0q5msN"><img src="https://i.ibb.co/1vq0bXs/exampler.png" alt="exampler" border="0"></a>
+<p align="center"><a href="https://ibb.co/K0q5msN"><img src="https://i.ibb.co/1vq0bXs/exampler.png" alt="exampler" border="0"></a> </p>
+
 
 ## Authors 
 
