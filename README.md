@@ -19,8 +19,8 @@ The repository contains the following files:
 |[man_1_simple_shell](./man_1_simple_shell) | Man page for the created shell |
 |[shell.h](./shell.h)| Header file containing all function prototypes and struct declarations |
 |[main.c](./main.c) | The main function |
-|[functions.c](./functions.c) | `_strdup` function, `call_strtok` function, `execute` function,  `find_path` function, `str_concat` function, |
-|[functions1.c](./functions1.c)|  |
-|[functions2.c](./functions2.c)|  |
-|[functions3.c](./functions3.c)| |
+|[functions.c](./functions.c) | `_strdup` function, `call_strtok` function, `execute` function,  `find_path` function and `str_concat` function |
+|[functions1.c](./functions1.c)| `_getenv` function, `_getposition` function, `_cexit` function,  `_atoi` function and `delspace` function |
+|[functions2.c](./functions2.c)| `message_exit` function, `built_in` function, `_cenv` function,  `free_stuff` function and `argset` function |
+|[functions3.c](./functions3.c)| `_unsetenv` function, `argunset` function and `handle_sigint` function |
 
