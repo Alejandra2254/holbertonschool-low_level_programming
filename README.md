@@ -29,7 +29,7 @@ The repository contains the following files:
 |[functions2.c](./functions2.c)| `message_exit` function, `built_in` function, `_cenv` function,  `free_stuff` function and `argset` function |
 |[functions3.c](./functions3.c)| `_unsetenv` function, `argunset` function and `handle_sigint` function |
 
-### Usage and Installation 
+## Usage and Installation 
 1. Clone the repository 
 ```
 $ https://github.com/torres1-23/simple_shell.git
