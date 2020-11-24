@@ -19,8 +19,8 @@ The repository contains the following files:
 |[man_1_simple_shell](./man_1_simple_shell) | Man page for the created shell |
 |[shell.h](./shell.h)| - Header file containing all function prototypes and struct declarations - kkk|
 |[main.c](./main.c) | The main function |
-|[functions.c](./functions.c) | Handles exit, env built-in commands |
-|[functions1.c](./functions1.c)| Actions executes given input into the shell |
-|[functions2.c](./functions2.c)| Actions executes given input into the shell |
-|[functions3.c](./functions3.c)| Actions executes given input into the shell |
+|[functions.c](./functions.c) |  |
+|[functions1.c](./functions1.c)|  |
+|[functions2.c](./functions2.c)|  |
+|[functions3.c](./functions3.c)| |
 
