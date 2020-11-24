@@ -32,7 +32,7 @@ The repository contains the following files:
 ### Usage and Installation 
 Clone the repository, compile with compilation flags, listed below, then run the executable.
 ```
-$ git clone https://github.com/------/simple_shell.git
+$ https://github.com/torres1-23/simple_shell.git
 ```
 #### Compilation 
 `Simple_shell` will be compiled this way:
