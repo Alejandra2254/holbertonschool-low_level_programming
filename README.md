@@ -9,6 +9,11 @@ Our `simple_shell` will have the ability to:
     - Parse: Separate the command into a program and arguments.
     - Execute: executes the analyzed command.
 3. Terminate - After your commands run, `simple_shell` executes shutdown commands, frees memory, and terminates.
+## Autors ✒️
+
+* **Mauricio Alejandro Torres** - [torres1-23](https://github.com/torres1-23)
+* **Alejandra Higuera Munevar** - [Alejandra2254](https://github.com/Alejandra2254)
+
 
 ## File Contents
 The repository contains the following files:
