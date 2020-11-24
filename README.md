@@ -34,8 +34,8 @@ Clone the repository, compile with compilation flags, listed below, then run the
 ```
 $ git clone https://github.com/------/simple_shell.git
 ```
-### Compilation 
-This code was compiled this way:
+#### Compilation 
+`Simple_shell` will be compiled this way:
 ` $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh `
 ## Running an Example
 
