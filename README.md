@@ -30,13 +30,14 @@ The repository contains the following files:
 |[functions3.c](./functions3.c)| `_unsetenv` function, `argunset` function and `handle_sigint` function |
 
 ### Usage and Installation 
-Clone the repository, compile with compilation flags, listed below, then run the executable.
+1. Clone the repository 
 ```
 $ https://github.com/torres1-23/simple_shell.git
 ```
-#### Compilation 
+2. Compile with compilation flags
 `Simple_shell` will be compiled this way:
 ` $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh `
+3. Run the executable.
 ## Running an Example
 
 
