@@ -1,5 +1,7 @@
 # Titulo del proyecto
 
+## Description  📄
+
 `Simple_shell` is a project that consists of building a simple Unix shell replica, in order to obtain a deeper appreciation of how it works. Also, as specific objectives `simple_shell` is programmed in c language, based on everything learned so far and applying linux concepts as well.
 
 Our `simple_shell` will have the ability to:
