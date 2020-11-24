@@ -1,4 +1,4 @@
-# Titulo del proyecto
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/VgLMKFX/sss.png" alt="sss" border="0"></a>
 
 ## Description  
 `Simple_shell` is a project that consists of building a simple Unix shell replica, in order to obtain a deeper appreciation of how it works. Also, as specific objectives `simple_shell` is programmed in c language, based on everything learned so far and applying linux concepts as well.
