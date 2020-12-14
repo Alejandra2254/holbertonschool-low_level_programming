@@ -1,53 +1,38 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - insert element into dlist node at index
- *
- * @h: head of dlist
- * @idx: index of element to be inserted
- * @n: data to insert
- *
- * Return: Address of new node or NULL
+ * insert_dnodeint_at_index - Insert a node at specific index.
+ * @h: head of the list.
+ * @n: Number passed for the node.
+ * @idx: Index of the node
+ * Return: The new node at specific position or NULL.
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *temp, *new;
-	unsigned int c = 0;
+	dlistint_t *tmp = *h, *new;
+	unsigned int i = 0;
 
-	if ((!h) || (!*h))
-		return (NULL);
-
+	if (idx == 0 || !*h)
+		return (add_dnodeint(h, n));
 	new = malloc(sizeof(dlistint_t));
-	if (!new)
+	while (i < idx - 1)
 	{
-		free(new);
-		return (NULL);
+		if (!tmp)
+			return (NULL);
+		tmp = tmp->next;
+		i++;
 	}
+	if (i == idx - 1 && !tmp->next)
+		return (add_dnodeint_end(h, n));
 	new->n = n;
-
-	temp = *h;
-
-	if (idx == 0)
-	{
-		new->next = temp;
-		new->prev = NULL;
-		*h = new;
-	}
+	if (tmp->next)
+		new->next = tmp->next;
 	else
-	{
-		while (temp)
-		{
-			if (c == idx - 1)
-			{
-				new->next = temp->next;
-				temp->next = new;
-				new->prev = temp;
-				break;
-			}
-			c++;
-			temp = temp->next;
-		}
-	}
+		new->next = NULL;
+	tmp->next->prev = new;
+	tmp->next = new;
+	new->prev = tmp;
+
 	return (new);
 }
