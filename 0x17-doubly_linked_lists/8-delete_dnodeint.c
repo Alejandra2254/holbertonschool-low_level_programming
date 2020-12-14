@@ -9,43 +9,33 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *tmp = *head;
-	dlistint_t *p = NULL;
-	dlistint_t *delete = NULL;
-	unsigned int i = 1;
+        dlistint_t *ptr = *head;
+        dlistint_t *next = NULL;
+        unsigned int i;
 
+        if (head == NULL || *head == NULL)
+                return (-1);
+        /*If head needs to be removed*/
+        if (index == 0)
+        {
+                *head = ptr->next;   /*Change head*/
+                free(ptr);          /* free old head*/
+                return (1);
+        }
+        /* Find previous node of the node to be deleted*/
+        for (i = 0; ptr != NULL && i < index - 1; i++)
+                ptr = ptr->next;
 
-	while (index > i)
-	{
-		tmp = tmp->next;
-		i++;
-	}
-	if (tmp == NULL)
-		return(-1);
-	if (tmp == *head)
-	{
-		delete = tmp;
-		tmp = tmp->next;
-		*head = tmp;
-		if (tmp != NULL)
-			tmp->prev = NULL;
-	}
-	else if (tmp->next->next == NULL)
-	{
-		tmp->next->prev = NULL;
-		delete = tmp->next;
-		tmp->next = NULL;
+        /* If position is more than number of nodes*/
+        if (ptr == NULL || ptr->next == NULL)
+                return (-1);
+        /* Node temp->next is the node to be deleted */
+        /* Store pointer to the next of node to be deleted*/
+        next = ptr->next->next;
 
-	}
-	else
-	{
-		delete = tmp->next;
-		p = tmp->next->next;
-		tmp->next->next = NULL;
-		tmp->next->prev = NULL;
-		tmp->next = p;
-		p->prev = tmp;
-	}
-	free(delete);
-	return(1);
+        /* Unlink the node from linked list*/
+        free(ptr->next);
+
+        ptr->next = next;
+        return (-1);
 }
