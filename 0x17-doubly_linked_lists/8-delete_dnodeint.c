@@ -1,41 +1,42 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * sum_dlistint - function that returns the sum of all the data (n) of a
- * dlistint_t linked list.
- * @head: input of a list.
- * Return: the sum of the list
+ * delete_dnodeint_at_index - function that deletes a dlist node
+ * @head: address of var pointing to head
+ * @index: node to delete
+ *
+ * Return: 1 on success
  */
-
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-        dlistint_t *ptr = *head;
-        dlistint_t *next = NULL;
-        unsigned int i;
+	dlistint_t *node, *tmp;
+	unsigned int count = 0;
 
-        if (head == NULL || *head == NULL)
-                return (-1);
-        /*If head needs to be removed*/
-        if (index == 0)
-        {
-                *head = ptr->next;   /*Change head*/
-                free(ptr);          /* free old head*/
-                return (1);
-        }
-        /* Find previous node of the node to be deleted*/
-        for (i = 0; ptr != NULL && i < index - 1; i++)
-                ptr = ptr->next;
+	if ((!head) || (!*head))
+		return (-1);
 
-        /* If position is more than number of nodes*/
-        if (ptr == NULL || ptr->next == NULL)
-                return (-1);
-        /* Node temp->next is the node to be deleted */
-        /* Store pointer to the next of node to be deleted*/
-        next = ptr->next->next;
+	node = *head;
+	if (index == 0)
+	{
+		*head = (*head)->next;
+		free(node);
+	}
+	else
+	{
+		while (count < index - 1)
+		{
+			node = node->next;
+			if (node->next == NULL)
+				return (-1);
+			count++;
+		}
 
-        /* Unlink the node from linked list*/
-        free(ptr->next);
+		tmp = node->next;
+		node->next = node->next->next;
 
-        ptr->next = next;
-        return (-1);
+		free(tmp);
+	}
+
+	return (0);
 }
