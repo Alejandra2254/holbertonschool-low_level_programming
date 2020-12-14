@@ -1,1 +1,2 @@
-this repository is doing to first c exercicies
+# low level programming
+
