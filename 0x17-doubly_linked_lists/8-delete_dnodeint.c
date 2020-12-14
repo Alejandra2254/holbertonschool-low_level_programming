@@ -1,52 +1,40 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - Deletes the node at index of a linked list.
- * @head: Double pointer to the head.
- * @index: Index.
+ * delete_dnodeint_at_index - Removes a node at a given position
+ * @head: Pointer to pointer to the head of the list
+ * @index: The position where the node has to be inserted
  *
- * Return: 1 if it succeeded, -1 if it failed.
- **/
+ * Return: number of elements in linked list
+ */
+
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int i = 0;
-	dlistint_t *aux;
+dlistint_t *inxd_node, *tmp_node = *head;
+unsigned int idx = 0;
 
-	if (*head == NULL || head == NULL)
-		return (-1);
-	aux = *head;
-	if (index == 0 && (*head)->next == NULL)
-	{
-		free(*head);
-		*head = NULL;
-		return (1);
-	}
-	else if (index == 0 && (*head)->next != NULL)
-	{
-		(*head) = (*head)->next;
-		free((*head)->prev);
-		(*head)->prev = NULL;
-		return (1);
-	}
-	while (aux)
-	{
-		if (i == index - 1 && aux->next != NULL)
-		{
-			aux->next = aux->next->next;
-			free(aux->next->prev);
-			aux->next->prev = aux;
-			return (1);
-		}
-		else if (i == index - 1 && aux->next == NULL)
-		{
-			free(aux->next);
-			aux->next = NULL;
-			return (1);
-		}
-		aux = aux->next;
-		i++;
-	}
-	if (index > i)
-		return (-1);
-	return (-1);
+if (tmp_node && (index == 0))
+{
+*head = tmp_node->next;
+free(tmp_node);
+return (1);
+}
+while (tmp_node)
+{
+if (idx + 1 == index)
+{
+inxd_node = tmp_node->next;
+if (inxd_node)
+{
+tmp_node->next = inxd_node->next;
+if (inxd_node->next)
+inxd_node->next->prev = tmp_node;
+free(inxd_node);
+return (1);
+}
+}
+tmp_node = tmp_node->next;
+idx++;
+}
+return (-1);
 }
