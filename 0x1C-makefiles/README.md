@@ -23,7 +23,7 @@ How?
 file1 and file2 are available
 4. Specials, as all or clean objetives without depends
 
-´´´
+```
 #
  #Makefile for the geometry program
  #
@@ -35,17 +35,17 @@ file1 and file2 are available
  gcc -c formatting.c
  geometry: area.o perimeter.o formatting.o geometry.c
  gcc -o geometry area.o perimeter.o formatting.o geometry.c
-´´´
+```
 
 ### What are rules and how to set and use them
 
 A rule appears in the makefile and says when and how to remake certain files, called the rule’s targets (most often only one per rule). It lists the other files that are the prerequisites of the target, and the recipe to use to create or update the target.
 
 Here a rule example
-´´´
+```
 foo.o : foo.c defs.h       # module for twiddling the frobs
         cc -c -g foo.c
-´´´
+```
 
 ### What are explicit and implicit rules
 ### What are the most common / useful rules
