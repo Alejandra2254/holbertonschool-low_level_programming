@@ -4,7 +4,7 @@ OBJ = $(SRC:.c=.o)
 NAME = holberton
 
 all: $(OBJ)
-    $(CC) $^ -o $(NAME)
+	$(CC) $^ -o $(NAME)
 
 %.o: %.c %.h
 	$(CC) -c $^
