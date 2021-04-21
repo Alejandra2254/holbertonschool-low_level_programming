@@ -6,13 +6,11 @@
  * @array: pointer to the first element of the array to search in
  * @size: is the number of elements in array
  * @value: is the value to search for
- *
  * Return: the first index where value is located
- *         If value is not present in array or if array is NULL, -1
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t a, b, jump;
+	size_t a = 0, b = 0, jump = 0;
 
 	if (!array)
 		return (-1);
