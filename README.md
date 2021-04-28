@@ -19,10 +19,12 @@ The backend of the application uses the cvlib library, (as long as the openCV, t
 # Technologies 
 * python3.5
 * pip
+* numpy
 * OpenCV
 * Tensorflow
 * Flutter
-* Flast - api
+* Fast - api / Uvicorn, library as server to run fast api.
+* azure-storage-blob
 
 ## Table of contents
 | Foulder/File | Description  |
